@@ -1,0 +1,26 @@
+.searchbarInput {
+  background: #ffffff;
+  border: 2px solid #204080;
+  border-radius: 8px;
+  height: 48px;
+  width: 646px;
+  display: inline-block;
+  outline: none;
+  vertical-align: middle;
+  padding: 0 0 0 50px ;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.searchbarTitle {
+  font-size: 32px;
+  line-height: 36px;
+  margin-bottom: 8px;
+}
+
+
+.searchbarIcon {
+    position: relative;
+    left: 30px;
+    vertical-align: middle; cursor: pointer;
+}
