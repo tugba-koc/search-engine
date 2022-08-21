@@ -1,13 +1,13 @@
 import React from 'react'
 import Logo from '../components/Logo'
-import SearchBar from '../components/SearchBar'
+import SearchBarWithIcon from '../components/SearchBarWithIcon'
 import ShortList from '../components/ShortList'
 
 const Landing = () => {
     return (
         <>
             <Logo />
-            <SearchBar />
+            <SearchBarWithIcon />
             <ShortList />
         </>
     )

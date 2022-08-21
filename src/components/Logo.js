@@ -1,12 +1,14 @@
 import React from 'react';
 import logo from '../utils/img/tesodev_logo.png';
-import styles from "./Logo.module.css"
+import styles from "./Logo.module.css";
+import { useLocation } from 'react-router-dom';
 
 const Logo = () => {
+    const location = useLocation();
     return (
         <div className={styles.logoPartWrapper}>
             <img src={logo} alt="tesodev_logo" />
-            <p className={styles.text}>Search app</p>
+            {location.pathname === "/" && <p className={styles.text}>Search app</p>}
         </div>
     )
 }

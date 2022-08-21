@@ -1,0 +1,44 @@
+.shortListItemSingle {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 25px 0 0 30px;
+    padding: 20px ;
+    border-radius: 10px;
+}
+
+.shortListItemSingle:hover {
+    background: rgba(79, 117, 194, 0.21);
+}
+
+.shortListItemSingle div:last-child {
+    margin-left: auto;
+}
+
+.shortListItemSingle div:nth-child(2) {
+    margin-left: 20px;
+}
+
+.shortListItemSingle:last-child {
+    margin: 25px 0 25px 30px;
+}
+
+
+.shortListItemCity {
+    font-size: 16px;
+    line-height: 20px;
+    color: #090A0A;
+    margin: 0
+}
+
+.shortListItemName, .shortListItemDate {
+    text-align: right;
+    margin: 0
+}
+
+.shortListItemAddress, .shortListItemDate {
+    font-size: 14px;
+    line-height: 16px;
+    color: #72777A;
+    margin: 4px 0 0 0;
+}

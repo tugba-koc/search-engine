@@ -1,8 +1,13 @@
 import React from 'react'
+import LongList from '../components/LongList'
+import SearchBar from '../components/SearchBar'
 
 const List = () => {
   return (
-    <div>List</div>
+    <>
+      <SearchBar />
+      <LongList />
+    </>
   )
 }
 

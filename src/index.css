@@ -26,9 +26,11 @@ code {
 
 .primary-font-bold {
   font-family: var(--primary-font-bold) !important;
+  font-weight: 700;
 }
 
 .primary-font-regular {
   font-family: var(--primary-font-regular) !important;
+  font-weight: 400;
 }
 

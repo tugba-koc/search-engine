@@ -18,7 +18,10 @@ export const listSlice = createSlice({
     },
     reducers: {
         filterItems: (state, action) => {
-            state.filteredList = state.item.filter(item => item[0].toLowerCase().includes(action.payload))
+            state.filteredList = state.item.filter(item => item[0].toLowerCase().includes(action.payload));
+        },
+        onChangeHandler: (state, action) => {
+            state.text = action.payload;
         }
     },
     extraReducers: {
@@ -38,6 +41,7 @@ export const listSlice = createSlice({
 
 export const selectItems = (state) => state.list.item;
 export const selectStatus = (state) => state.list.status;
+export const selectText = (state) => state.list.text;
 export const selectFilteredList = (state) => state.list.filteredList;
-export const { filterItems } = listSlice.actions;
+export const { filterItems, onChangeHandler } = listSlice.actions;
 export default listSlice.reducer;

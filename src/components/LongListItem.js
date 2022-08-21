@@ -1,11 +1,9 @@
 import React from 'react';
-import styles from './ShortListItem.module.css';
-import { useLocation } from 'react-router-dom';
+import styles from './LongListItem.module.css';
 
 const ShortListItem = (props) => {
-    const location = useLocation();
     const { item } = props;
-    
+
     return (
         <div className={styles.shortListItemSingle}>
             <div>
@@ -15,15 +13,13 @@ const ShortListItem = (props) => {
                 </svg>
             </div>
             <div>
-                <p className={`primary-font-regular ${styles.shortListItemName}`}>{item[5]}</p>
+                <p className={`primary-font-bold ${styles.shortListItemCity}`}>{item[5]}</p>
                 <p className={`primary-font-regular ${styles.shortListItemAddress}`}>{item[4]}</p>
             </div>
-            {location.pathname === "/list" && (
-                <div>
-                    <p className={`primary-font-regular ${styles.shortListItemName}`}>{item[0]}</p>
-                    <p className={`primary-font-regular ${styles.shortListItemAddress}`}>{item[3]}</p>
-                </div>
-            )}
+            <div>
+                <p className={`primary-font-regular ${styles.shortListItemName}`}>{item[0]}</p>
+                <p className={`primary-font-bold ${styles.shortListItemDate}`}>{item[3]}</p>
+            </div>
         </div>
     );
 };

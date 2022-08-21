@@ -2,9 +2,28 @@
     display: inline-flex;
     flex-direction: row;
     align-items: center;
+    margin: 25px 0 0 30px;
+}
+
+.shortListItemSingle:last-child {
+    margin: 25px 0 25px 30px;
 }
 
 
 .shortListItemSingle div:last-child {
-    margin-left: 20px;
+    margin-left: 15px;
+}
+
+.shortListItemName {
+    font-size: 16px;
+    line-height: 20px;
+    color: #090A0A;
+    margin: 0
+}
+
+.shortListItemAddress {
+    font-size: 14px;
+    line-height: 16px;
+    color: #72777A;
+    margin: 4px 0 0 0;
 }

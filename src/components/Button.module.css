@@ -1,5 +1,5 @@
 .button {
-  width: 138px;
+  width: 140px;
   height: 46px;
   background: #204080;
   border-radius: 12px;
@@ -7,4 +7,10 @@
   font-size: 18px;
   border: none;
   cursor: pointer;
+  margin-left: 10px;
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
 }
