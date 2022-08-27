@@ -1,0 +1,29 @@
+.paginationButtonGroup {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30%;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.paginationButtonItem {
+  background: #ffffff;
+  border: 1px solid #484848;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #484848;
+  font-weight: 700;
+  padding: 4px 8px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+#active {
+  background: #204080 !important;
+  color: white;
+}
+  
+.hidden {
+  display: none !important;
+}

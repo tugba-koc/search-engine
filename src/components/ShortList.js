@@ -10,9 +10,7 @@ const ShortList = () => {
   const dispatch = useDispatch();
   let status = useSelector(selectStatus);
   let filteredList = useSelector(selectFilteredList);
-
   let text = useSelector(selectText);
-
 
   useEffect(() => {
     if (status === "idle") dispatch(getList());

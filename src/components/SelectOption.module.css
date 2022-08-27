@@ -1,0 +1,21 @@
+.selectWrapper {
+  background: #f3f2f2;
+  border: 1px solid #414141;
+  border-radius: 8px;
+  width: 140px;
+  height: 30px;
+  font-weight: 600;
+  margin-top: 50px;
+  outline: none;
+}
+
+.optionSingle > li {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.optionSingle li:hover {
+    color: red
+}

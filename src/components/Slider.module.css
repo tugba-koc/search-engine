@@ -1,0 +1,50 @@
+.img {
+    width: 320px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.slideWrapper {
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.sliderInner {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide:first-of-type {
+    margin-left: 50px;
+}
+
+.button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.description {
+    margin-bottom: 5px;
+}
+
+.note {
+    margin: 0;
+    font-size: 12px;
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 45px;
+    margin-left: 110px;
+    margin-top: 90px;
+}
