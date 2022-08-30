@@ -66,6 +66,7 @@ export const listSlice = createSlice({
 export const selectItems = (state) => state.list.item;
 export const selectStatus = (state) => state.list.status;
 export const selectText = (state) => state.list.text;
+export const selectError = (state) => state.list.error;
 export const selectSortedTerm = (state) => state.list.sortedTerm;
 export const selectFilteredList = (state) => state.list.filteredList;
 export const selectSortedList = (state) => state.list.sortedList;

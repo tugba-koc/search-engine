@@ -5,6 +5,7 @@ import Logo from '../components/Logo'
 import SearchBarWithIcon from '../components/SearchBarWithIcon'
 import ShortList from '../components/ShortList'
 import Slider from '../components/Slider'
+import Slider2 from '../components/Slider2'
 
 const Landing = () => {
     return (
@@ -14,6 +15,7 @@ const Landing = () => {
             <SearchBarWithIcon />
             <ShortList />
             <Slider />
+            <Slider2 />
             <Location />
         </>
     )
