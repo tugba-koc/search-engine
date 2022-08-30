@@ -1,22 +1,21 @@
+@import "../scss/variable.scss";
+
 .searchbarInput {
-  background: #ffffff;
-  border: 2px solid #204080;
+  background: $contrast-color;
+  border: 2px solid $primary-color;
   border-radius: 8px;
   height: 48px;
-  /* width: 646px; */
   display: inline-block;
   outline: none;
   vertical-align: middle;
   padding: 0 0 0 50px;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: $font-size-regular;
   width: 70%;
   max-width: 646px;
 }
 
 .searchbarTitle {
-  font-size: 32px;
-  line-height: 36px;
+  font-size: $font-size-biggest;
   margin-bottom: 8px;
   margin-left: 30px;
 }

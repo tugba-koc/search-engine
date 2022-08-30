@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchButton from './SearchButton';
-import styles from "./SearchBarWithIcon.module.css";
+import styles from "./SearchBarWithIcon.module.scss";
 import {useDispatch} from 'react-redux';
 import { filterItems, onChangeHandler } from '../redux/list/listSlice';
 import { selectText } from '../redux/list/listSlice';

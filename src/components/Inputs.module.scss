@@ -1,10 +1,12 @@
+@import  "../scss//variable.scss";
+
 .input {
-  border: 1.5px solid #484848;
+  border: 1.5px solid $text-light;
   border-radius: 12px;
   height: 46px;
   width: 590px;
   padding-left: 20px;
-  font-size: 18px;
+  font-size: $font-size-big;
 }
 
 .inputWrapper {
@@ -18,15 +20,14 @@
 
 .inputWrapper > div > label {
   display: block;
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   margin-bottom: 6px;
 }
 
 .inputWrapper > div > p {
   color: red;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-regular;
   color: rgba(255, 0, 0, 0.5);
   margin-top: 2px;
 }
@@ -51,10 +52,9 @@
   border-radius: 12px;
   border: none;
   width: 130px;
-  color: white;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
+  color: $contrast-color;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-big;
   padding: 10px;
   cursor: pointer;
 }

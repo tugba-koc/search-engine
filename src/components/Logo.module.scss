@@ -1,0 +1,17 @@
+@import "../scss/variable.scss";
+@import "../scss/inheritance.scss";
+
+.logoPartWrapper {
+    @extend .flexColumnAlignCenter;
+    height: 100%;
+}
+
+.text {
+  margin-top: 10px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-lower;
+  color: $text-light;
+  margin-left: 250px;
+}

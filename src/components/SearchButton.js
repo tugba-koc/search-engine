@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./SearchButton.module.css";
+import styles from "./SearchButton.module.scss";
 import { Link } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import { selectText } from '../redux/list/listSlice';

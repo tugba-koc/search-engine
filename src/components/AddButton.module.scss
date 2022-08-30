@@ -1,0 +1,17 @@
+@import "../scss/variable.scss";
+@import "../scss/inheritance.scss";
+
+.button {
+  @extend .button;
+  width: 180px;
+  padding: 0 24px;
+  margin-left: auto;
+  text-align: center;
+  justify-content: end;
+  margin-right: 5%;
+  min-width: 180px;
+}
+
+.button a {
+  @extend .buttonLink;
+}

@@ -1,7 +1,8 @@
+@import "../scss/variable.scss";
+@import "../scss/inheritance.scss";
+
 .shortListItemSingle {
-    display: inline-flex;
-    flex-direction: row;
-    align-items: center;
+    @extend .flexRowAlignCenter;
     margin: 25px 0 0 30px;
     padding: 20px ;
     border-radius: 10px;
@@ -25,9 +26,8 @@
 
 
 .shortListItemCity {
-    font-size: 16px;
-    line-height: 20px;
-    color: #090A0A;
+    font-size: $font-size-regular;
+    color: $text-dark;
     margin: 0
 }
 
@@ -37,8 +37,7 @@
 }
 
 .shortListItemAddress, .shortListItemDate {
-    font-size: 14px;
-    line-height: 16px;
-    color: #72777A;
+    font-size: $font-size-lower;
+    color: $secondary-color;
     margin: 4px 0 0 0;
 }

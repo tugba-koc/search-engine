@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './LongListItem.module.css';
+import styles from './LongListItem.module.scss';
 
 const ShortListItem = (props) => {
     const { item } = props;

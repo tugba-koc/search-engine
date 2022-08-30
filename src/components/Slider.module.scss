@@ -1,3 +1,6 @@
+@import "../scss/variable.scss";
+@import "../scss/inheritance.scss";
+
 .img {
     width: 320px;
     height: 190px;
@@ -10,17 +13,14 @@
 }
 
 .sliderInner {
-    display: flex;
-    flex-direction: row;
+    @extend .flexRowAlignCenter;
     width: 1200px;
     justify-content: space-around;
     margin: auto;
-    align-items: center;
 }
 
 .slide {
-    display: flex;
-    flex-direction: column;
+    @extend .flexColumn;
 }
 
 .slide:first-of-type {
@@ -43,7 +43,7 @@
 }
 
 .title {
-    font-size: 32px;
+    font-size: $font-size-biggest;
     margin-bottom: 45px;
     margin-left: 90px;
     margin-top: 90px;

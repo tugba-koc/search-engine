@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from "./SearchBar.module.css";
+import styles from "./SearchBar.module.scss";
 import {useDispatch} from 'react-redux';
 import Logo from './Logo';
-import { filterItems, onChangeHandler, selectSortedTerm } from '../redux/list/listSlice';
+import { filterItems, onChangeHandler } from '../redux/list/listSlice';
 import { selectText } from '../redux/list/listSlice';
 import { useSelector } from 'react-redux';
 import AddButton from './AddButton';

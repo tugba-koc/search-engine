@@ -1,6 +1,6 @@
 import React from 'react';
 import image from "../utils/img/address.png";
-import styles from "./Location.module.css"
+import styles from "./Location.module.scss"
 
 const Location = () => {
     return (

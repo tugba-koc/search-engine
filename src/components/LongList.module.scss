@@ -1,6 +1,7 @@
+@import "../scss/inheritance.scss";
+
 .shortListMainWrapper {
-    display: flex;
-    flex-direction: column;
+    @extend .flexColumn;
     width: 870px;
     margin-top: 16px;
     margin-left: 180px;

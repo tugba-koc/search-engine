@@ -1,21 +1,20 @@
+@import "../scss/variable.scss";
+@import "../scss/inheritance.scss";
+
 .header {
-  display: flex;
-  flex-direction: row;
+  @extend .flexRow;
 }
 
 .content a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  @extend .flexRowAlignCenter;
   text-decoration: none;
 }
 
 .content > a > p {
   margin-left: 10px;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: #484848;
+  font-size: $font-size-bigger;
+  color: $text-light;
 }
 
 .header > div:first-child > div > a > img {

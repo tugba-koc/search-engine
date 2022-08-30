@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./Slider.module.css";
+import styles from "./Slider.module.scss";
 
 const Slider = () => {
     let slider = [

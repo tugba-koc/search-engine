@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../utils/img/tesodev_logo.png';
-import styles from "./Logo.module.css";
+import styles from "./Logo.module.scss";
 import { useLocation } from 'react-router-dom';
 import {Link} from "react-router-dom"
 

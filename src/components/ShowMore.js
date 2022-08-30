@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { selectText } from '../redux/list/listSlice';
-import styles from "./ShowMore.module.css"
+import styles from "./ShowMore.module.scss"
 
 const ShowMore = () => {
     const navigate = useNavigate();

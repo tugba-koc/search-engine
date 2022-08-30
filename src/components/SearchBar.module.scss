@@ -1,6 +1,9 @@
+@import "../scss/variable.scss";
+@import "../scss/inheritance.scss";
+
 .searchbarInput {
-    background: #ffffff;
-    border: 2px solid #204080;
+    background: $contrast-color;
+    border: 2px solid $primary-color;
     border-radius: 8px;
     height: 48px;
     width: 646px;
@@ -8,16 +11,13 @@
     outline: none;
     vertical-align: middle;
     padding: 0 0 0 30px ;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: $font-size-regular;
   }
 
 .searchbarMainWrapper {
-  display: flex;
-  flex-direction: row;
+  @extend .flexRowAlignCenter;
   height: 60px;
   margin-left: 25px;
-  align-items: center;
 }
 
 .searchbarMainWrapper div img {

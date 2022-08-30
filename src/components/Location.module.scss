@@ -1,8 +1,9 @@
+@import "../scss/variable.scss";
+@import "../scss/inheritance.scss";
+
 .locationWrapper {
-    display: flex;
-    flex-direction: row;
+    @extend .flexRowAlignCenter;
     width: 1175px;
-    align-items: center;
     justify-content: space-between;
     margin: 50px auto;
 }
@@ -24,11 +25,11 @@
 
 .content {
     width: 420px;
-    font-size: 18px;
-    color: white;
+    font-size: $font-size-big;
+    color: $contrast-color;
 }
 
 .email {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: $font-size-big;
 }

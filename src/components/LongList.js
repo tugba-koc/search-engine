@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./LongList.module.css";
+import styles from "./LongList.module.scss";
 import LongListItem from './LongListItem';
 
 const LongList = ({ currentList }) => {

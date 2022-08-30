@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from "./Inputs.module.css"
+import styles from "./Inputs.module.scss"
 import Modal from './Modal';
 
 const Inputs = () => {

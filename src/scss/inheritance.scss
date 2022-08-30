@@ -1,0 +1,38 @@
+@import "./variable.scss";
+
+.button {
+  height: 46px;
+  background: $primary-color;
+  border-radius: 12px;
+  color: $contrast-color;
+  font-size: $font-size-big;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonLink {
+  color: $contrast-color;
+  text-decoration: none;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRowAlignCenter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flexColumnAlignCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

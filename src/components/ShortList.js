@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import ShortListItem from './ShortListItem';
 import { selectFilteredList, selectStatus, getList, selectText } from '../redux/list/listSlice';
 import ShowMore from './ShowMore';
-import styles from './ShortList.module.css';
+import styles from './ShortList.module.scss';
 import ErrorView from './ErrorView';
 import Spinner from './Spinner';
 
