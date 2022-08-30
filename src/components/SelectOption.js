@@ -30,7 +30,7 @@ const SelectOption = () => {
                 <option value="Order by" disabled hidden>Order by</option>
                 {options.map((el, index) => (
                     <option className={styles.optionSingle} key={index} value={el}>
-                        <li>{el}</li>
+                        {el}
                     </option>
                 ))}
             </select>

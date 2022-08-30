@@ -6,7 +6,7 @@
 
 .slideWrapper {
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .sliderInner {
@@ -24,7 +24,7 @@
 }
 
 .slide:first-of-type {
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .button {
@@ -45,6 +45,6 @@
 .title {
     font-size: 32px;
     margin-bottom: 45px;
-    margin-left: 110px;
+    margin-left: 90px;
     margin-top: 90px;
 }

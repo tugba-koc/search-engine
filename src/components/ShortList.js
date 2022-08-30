@@ -5,6 +5,8 @@ import ShortListItem from './ShortListItem';
 import { selectFilteredList, selectStatus, getList, selectText } from '../redux/list/listSlice';
 import ShowMore from './ShowMore';
 import styles from './ShortList.module.css';
+import ErrorView from './ErrorView';
+import Spinner from './Spinner';
 
 const ShortList = () => {
   const dispatch = useDispatch();
@@ -13,10 +15,16 @@ const ShortList = () => {
   let text = useSelector(selectText);
 
   useEffect(() => {
-    if (status === "idle") dispatch(getList());
+    if((status === "idle")){
+      dispatch(getList())
+    } 
   }, [dispatch, status])
 
-  if(text.length >= 2 && filteredList.length > 0) {
+  if(status === "failed"){
+    return <ErrorView />
+  }else if(status === "loading") {
+    return <Spinner />
+  }else if(text.length >= 2 && filteredList.length > 0) {
     return (
       <div className={styles.shortListMainWrapper}>
         {filteredList.slice(0,3).map((item, index) => (

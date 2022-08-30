@@ -1,0 +1,34 @@
+.locationWrapper {
+    display: flex;
+    flex-direction: row;
+    width: 1175px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px auto;
+}
+
+.locationOuterWrapper {
+    width: 100%;
+    background-color: rgba(41, 78, 152, 0.72);;
+}
+
+.image {
+    width: 210px;
+    height: 180px;
+}
+
+.map {
+    width: 468px;
+    height: 222px;
+}
+
+.content {
+    width: 420px;
+    font-size: 18px;
+    color: white;
+}
+
+.email {
+    margin-top: 20px;
+    font-size: 18px;
+}

@@ -1,19 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from "./LongList.module.css";
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
-import { selectStatus, getList, selectFilteredList } from '../redux/list/listSlice';
 import LongListItem from './LongListItem';
 
-const LongList = ({currentList}) => {
-    const dispatch = useDispatch();
-    let status = useSelector(selectStatus);
-    let filteredList = useSelector(selectFilteredList);
-
-    useEffect(() => {
-        if (status === "idle") dispatch(getList());
-    }, [dispatch, status]);
-
+const LongList = ({ currentList }) => {
     return (
         <div className={styles.shortListMainWrapper}>
             {currentList.map((item, index) => (

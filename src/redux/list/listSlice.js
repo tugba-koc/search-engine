@@ -40,11 +40,11 @@ export const listSlice = createSlice({
         },
         yearAscending: (state, action) => {
             state.sortedTerm = "Year ascending";
-            state.sortedList = state.filteredList.sort((a,b)=>Number(a[3].split("/").reverse().join("")) - Number(b[3].split("/").reverse().join("")))
+            state.sortedList = state.filteredList.sort((a, b) => Number(a[3].split("/").reverse().join("")) - Number(b[3].split("/").reverse().join("")))
         },
         yearDescending: (state, action) => {
             state.sortedTerm = "Year descending";
-            state.sortedList = state.filteredList.sort((a,b)=>Number(b[3].split("/").reverse().join("")) - Number(a[3].split("/").reverse().join("")))
+            state.sortedList = state.filteredList.sort((a, b) => Number(b[3].split("/").reverse().join("")) - Number(a[3].split("/").reverse().join("")))
         }
     },
     extraReducers: {

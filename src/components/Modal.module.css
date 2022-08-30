@@ -1,0 +1,10 @@
+.closeModal {
+  text-align: right;
+  cursor: pointer;
+}
+
+.modalWrapper {
+  background: #c4c4c4;
+  border-radius: 8px;
+  padding: 10px 20px;
+}

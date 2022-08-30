@@ -1,26 +1,45 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import LongList from '../components/LongList'
 import SearchBar from '../components/SearchBar';
-import { useSelector } from 'react-redux';
-import { selectSortedList } from '../redux/list/listSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { getList, selectFilteredList, selectSortedList, selectStatus } from '../redux/list/listSlice';
 import Pagination from '../components/Pagination';
 import SelectOption from '../components/SelectOption';
 import styles from "./List.module.css"
 import NoDataView from '../components/NoDataView';
 
 const List = () => {
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(1);
+  const dispatch = useDispatch();
+  let status = useSelector(selectStatus);
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(getList());
+    }
+  }, [dispatch, status]);
+
   let sortedList = useSelector(selectSortedList);
+  let filteredList = useSelector(selectFilteredList)
   // paginate filtered data
   let numPerPage = 4;
-  let numPages = Math.ceil(sortedList.length / numPerPage);
+  let numPages = ""
+  if (!sortedList.length) {
+    numPages = Math.ceil(filteredList.length / numPerPage);
+  } else {
+    numPages = Math.ceil(sortedList.length / numPerPage);
+  }
   let pages = [];
   for (let i = 1; i <= numPages; i++) {
     pages.push(i);
   }
   let start = (currentPage - 1) * numPerPage;
   let end = currentPage * numPerPage;
-  let currentList = sortedList.slice(start, end);
+  let currentList = [];
+  if (!sortedList.length) {
+    currentList = filteredList.slice(start, end);
+  } else {
+    currentList = sortedList.slice(start, end);
+  }
 
   return (
     <>
@@ -31,10 +50,9 @@ const List = () => {
             <LongList currentList={currentList} />
             <SelectOption />
           </div>
-          <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} pages={pages} />
+          ({currentList.length > 3 ? <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} pages={pages} /> : null})
         </>
-      ): <NoDataView />}
-
+      ) : <NoDataView />}
     </>
   )
 }

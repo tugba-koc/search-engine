@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import styles from "./NoDataView.module.css"
 
 const NoDataView = () => {
   return (
-    <>There is no data to show.</>
+    <div className={styles.wrapper}>There is no data to show.</div>
   )
 }
 

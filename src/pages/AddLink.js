@@ -1,8 +1,12 @@
 import React from 'react'
+import AddLinkHeader from '../components/AddLinkHeader'
+import Inputs from '../components/Inputs'
 
 const AddLink = () => {
   return (
-    <div>AddLink</div>
+    <>
+    <AddLinkHeader />
+    <Inputs /></>
   )
 }
 
