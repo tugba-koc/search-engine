@@ -1,6 +1,10 @@
-import React from 'react';
+// Styles
 import styles from "./SearchButton.module.scss";
+
+// React router
 import { Link } from "react-router-dom";
+
+// React redux
 import { useSelector } from 'react-redux';
 import { selectText } from '../redux/list/listSlice';
 

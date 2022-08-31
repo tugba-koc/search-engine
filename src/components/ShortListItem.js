@@ -1,5 +1,7 @@
-import React from 'react';
+// Styles
 import styles from './ShortListItem.module.scss';
+
+// React router
 import { useLocation } from 'react-router-dom';
 
 const ShortListItem = (props) => {

@@ -1,6 +1,10 @@
-import React from 'react'
+// Components
 import Logo from './Logo';
+
+// Styles
 import styles from "./AddLinkHeader.module.scss"
+
+// React router
 import { Link } from "react-router-dom"
 
 const AddLinkHeader = () => {

@@ -1,5 +1,7 @@
-import React from 'react';
+// Styles
 import styles from "./SelectOption.module.scss"
+
+// React redux
 import { useDispatch, useSelector } from 'react-redux';
 import { onChangeSortHandler, nameAscending, nameDescending, yearAscending, yearDescending, selectSortedTerm } from '../redux/list/listSlice';
 

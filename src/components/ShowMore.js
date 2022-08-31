@@ -1,8 +1,12 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { useNavigate } from "react-router-dom";
-import { selectText } from '../redux/list/listSlice';
+// Styles
 import styles from "./ShowMore.module.scss"
+
+// React redux
+import { useSelector } from 'react-redux';
+import { selectText } from '../redux/list/listSlice';
+
+// React router
+import { useNavigate } from "react-router-dom";
 
 const ShowMore = () => {
     const navigate = useNavigate();

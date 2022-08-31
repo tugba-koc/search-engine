@@ -1,4 +1,4 @@
-import React from 'react'
+// Components
 import AddLinkHeader from '../components/AddLinkHeader'
 import Inputs from '../components/Inputs'
 

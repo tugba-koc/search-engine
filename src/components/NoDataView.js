@@ -1,4 +1,4 @@
-import React from 'react';
+// Styles
 import styles from "./NoDataView.module.css"
 
 const NoDataView = () => {

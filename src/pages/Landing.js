@@ -1,4 +1,4 @@
-import React from 'react'
+// Components
 import AddButton from '../components/AddButton'
 import Location from '../components/Location'
 import Logo from '../components/Logo'

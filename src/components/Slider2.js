@@ -1,4 +1,7 @@
+// React
 import React, { useRef } from 'react';
+
+// Styles
 import styles from "./Slider2.module.scss";
 
 const Slider2 = () => {

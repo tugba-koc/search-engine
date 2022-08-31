@@ -1,6 +1,10 @@
-import React from 'react';
+// Styles
 import styles from "./Pagination.module.scss";
+
+// React router
 import { useNavigate } from 'react-router-dom';
+
+// React Redux
 import { selectText } from '../redux/list/listSlice';
 import { useSelector } from 'react-redux';
 

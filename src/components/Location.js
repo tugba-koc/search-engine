@@ -1,5 +1,7 @@
-import React from 'react';
+// Assets
 import image from "../utils/img/address.png";
+
+// Styles
 import styles from "./Location.module.scss"
 
 const Location = () => {

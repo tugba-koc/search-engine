@@ -1,12 +1,17 @@
+// React
 import React, { useEffect } from 'react';
+
+// React redux
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import ShortListItem from './ShortListItem';
 import { selectFilteredList, selectStatus, getList, selectText } from '../redux/list/listSlice';
+
+// Components
 import ShowMore from './ShowMore';
 import styles from './ShortList.module.scss';
 import ErrorView from './ErrorView';
 import Spinner from './Spinner';
+import ShortListItem from './ShortListItem';
 
 const ShortList = () => {
   const dispatch = useDispatch();

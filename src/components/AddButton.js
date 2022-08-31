@@ -1,5 +1,7 @@
-import React from 'react';
+// Styles
 import styles from "./AddButton.module.scss";
+
+// React router
 import { Link } from "react-router-dom";
 
 const AddButton = () => {

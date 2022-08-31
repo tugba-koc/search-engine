@@ -1,12 +1,19 @@
+// React
 import React, { useEffect, useState } from 'react'
+
+// Styles
+import styles from "./List.module.css"
+
+// Components
 import LongList from '../components/LongList'
 import SearchBar from '../components/SearchBar';
-import { useDispatch, useSelector } from 'react-redux';
-import { getList, selectFilteredList, selectSortedList, selectStatus } from '../redux/list/listSlice';
 import Pagination from '../components/Pagination';
 import SelectOption from '../components/SelectOption';
-import styles from "./List.module.css"
 import NoDataView from '../components/NoDataView';
+
+// React redux
+import { useDispatch, useSelector } from 'react-redux';
+import { getList, selectFilteredList, selectSortedList, selectStatus } from '../redux/list/listSlice';
 
 const List = () => {
   const [currentPage, setCurrentPage] = useState(1);

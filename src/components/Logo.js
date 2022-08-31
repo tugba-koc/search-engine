@@ -1,6 +1,10 @@
-import React from 'react';
+// Assets
 import logo from '../utils/img/tesodev_logo.png';
+
+// Styles
 import styles from "./Logo.module.scss";
+
+// Recat router
 import { useLocation } from 'react-router-dom';
 import {Link} from "react-router-dom"
 

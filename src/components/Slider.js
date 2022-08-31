@@ -1,4 +1,7 @@
-import React from 'react';
+// React
+import React, {useState} from 'react';
+
+// Styles
 import styles from "./Slider.module.scss";
 
 const Slider = () => {
@@ -35,7 +38,7 @@ const Slider = () => {
         }
     ]
 
-    const [currentIndex, setCurrentIndex] = React.useState(1)
+    const [currentIndex, setCurrentIndex] = useState(1)
     // paginate data
     let numPerPage = 2;
     let numPages = Math.ceil(slider.length);

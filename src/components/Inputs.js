@@ -1,9 +1,14 @@
-import React from 'react';
+// React
+import React, {useState} from 'react';
+
+// Styles
 import styles from "./Inputs.module.scss"
+
+// Components
 import Modal from './Modal';
 
 const Inputs = () => {
-    const [state, setState] = React.useState({
+    const [state, setState] = useState({
         nameSurname: "",
         country: "",
         city: "",

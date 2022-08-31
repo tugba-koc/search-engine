@@ -1,10 +1,14 @@
-import React from 'react';
+// Styles
 import styles from "./SearchBar.module.scss";
+
+// React redux
 import {useDispatch} from 'react-redux';
-import Logo from './Logo';
 import { filterItems, onChangeHandler } from '../redux/list/listSlice';
 import { selectText } from '../redux/list/listSlice';
 import { useSelector } from 'react-redux';
+
+// Components
+import Logo from './Logo';
 import AddButton from './AddButton';
 import SearchButton from './SearchButton';
 
@@ -18,7 +22,6 @@ const SearchBar = ({setCurrentPage}) => {
         filter = filter.toLowerCase();
         dispatch(onChangeHandler(filter));
         setCurrentPage(1)
-
         if(text.length >= 1) {
             dispatch(filterItems(filter)); 
         };
