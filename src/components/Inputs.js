@@ -35,7 +35,7 @@ const Inputs = () => {
     };
     return (
         <>
-            <form className={`${styles.inputWrapper}`}>
+            <form onSubmit={(e) => submitHandler(e)} className={`${styles.inputWrapper}`}>
                 <div>
                     <label htmlFor="text">Name Surname</label>
                     <input value={state.nameSurname} maxLength={60} onChange={onChangeInputHandler} placeholder='Enter name and surname' className={`${styles.input}`} type="text" name="nameSurname" />
@@ -60,7 +60,7 @@ const Inputs = () => {
                     <input required value={state.email} onChange={(e) => onChangeInputHandler(e)} placeholder='Enter an email address' className={`${styles.input}`} type="email" name="email" />
                     {state.isSubmitted && !state.email.length && <p>Please don't blank in this field.</p>}
                 </div>
-                <button onSubmit={(e) => submitHandler(e)} disabled={!(buttonActive)} className={`${!(buttonActive) ? styles.disabled : styles.activeButton} ${styles.button}`}>Add</button>
+                <button disabled={!(buttonActive)} className={`${!(buttonActive) ? styles.disabled : styles.activeButton} ${styles.button}`}>Add</button>
             </form>
             {state.isSubmitted && state.nameSurname.split(" ").length < 2 && (
                 <div className={styles.modal}>
