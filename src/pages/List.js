@@ -57,7 +57,7 @@ const List = () => {
             <LongList currentList={currentList} />
             <SelectOption />
           </div>
-          ({currentList.length > 3 ? <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} pages={pages} /> : null})
+          ({currentList.length > 3 || currentPage !== 1 ? <Pagination currentPage={currentPage} setCurrentPage={setCurrentPage} pages={pages} /> : null})
         </>
       ) : <NoDataView />}
     </>
