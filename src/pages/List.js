@@ -43,6 +43,7 @@ const List = () => {
   let end = currentPage * numPerPage;
   let currentList = [];
   if (!sortedList.length) {
+    console.log("YOK");
     currentList = filteredList.slice(start, end);
   } else {
     currentList = sortedList.slice(start, end);

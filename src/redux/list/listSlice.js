@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const getList = createAsyncThunk("get/getList", async () => {
     const res = await fetch("data/mockData.json");
     let val = await res.json();
-    let list = await val.data;
+    let list = val.data;
     return list
 });
 

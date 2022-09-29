@@ -8,7 +8,7 @@ const AddButton = () => {
   const navigate = useNavigate();
   return (
     <>
-      <button onClick={()=>navigate("/addlink")} className={styles.button}>Add new record</button>
+      <button onClick={()=>navigate("/add-link")} className={styles.button}>Add new record</button>
     </>
   )
 }
