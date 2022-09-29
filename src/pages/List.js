@@ -35,7 +35,7 @@ const List = () => {
   } else {
     numPages = Math.ceil(sortedList.length / numPerPage);
   }
-  let pages = [];
+  const pages = [];
   for (let i = 1; i <= numPages; i++) {
     pages.push(i);
   }
@@ -43,7 +43,6 @@ const List = () => {
   let end = currentPage * numPerPage;
   let currentList = [];
   if (!sortedList.length) {
-    console.log("YOK");
     currentList = filteredList.slice(start, end);
   } else {
     currentList = sortedList.slice(start, end);

@@ -24,6 +24,9 @@ export const listSlice = createSlice({
             state.sortedTerm = "Order by";
             state.sortedList = state.filteredList;
         },
+        addNewRecord : (state, action) => {
+            state.item = action.payload
+        },
         onChangeHandler: (state, action) => {
             state.text = action.payload;
         },
@@ -70,5 +73,5 @@ export const selectError = (state) => state.list.error;
 export const selectSortedTerm = (state) => state.list.sortedTerm;
 export const selectFilteredList = (state) => state.list.filteredList;
 export const selectSortedList = (state) => state.list.sortedList;
-export const { filterItems, onChangeHandler, onChangeSortHandler, nameAscending, nameDescending, yearAscending, yearDescending } = listSlice.actions;
+export const { addNewRecord, filterItems, onChangeHandler, onChangeSortHandler, nameAscending, nameDescending, yearAscending, yearDescending } = listSlice.actions;
 export default listSlice.reducer;

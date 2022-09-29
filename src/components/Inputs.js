@@ -1,13 +1,20 @@
 // React
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Styles
 import styles from "./Inputs.module.scss"
 
 // Components
 import Modal from './Modal';
+import { useSelector } from 'react-redux';
+import { selectItems } from '../redux/list/listSlice';
+import { useDispatch } from 'react-redux';
+import { getList, selectStatus, addNewRecord } from '../redux/list/listSlice';
 
 const Inputs = () => {
+    let items = useSelector(selectItems);
+    const dispatch = useDispatch();
+    let status = useSelector(selectStatus);
     const [state, setState] = useState({
         nameSurname: "",
         country: "",
@@ -16,6 +23,12 @@ const Inputs = () => {
         activeButton: false,
         isSubmitted: false
     });
+    useEffect(() => {
+        if (status === "idle") {
+          dispatch(getList());
+        }
+      }, [dispatch, status]);
+
     const onChangeInputHandler = (e) => {
         let value = e.target.value;
         if (e.target.name !== "email") value = value.replace(/[0-9]/gi, "");
@@ -31,15 +44,9 @@ const Inputs = () => {
         let year = new Date().getFullYear();
         let fullDate = day + "/" + monthDefault + "/" + year
         // eslint-disable-next-line no-unused-vars
-        let user = [state.nameSurname, "Tesodev", state.email, fullDate, state.country, state.city]
-        setState({
-            nameSurname: "",
-            country: "",
-            city: "",
-            email: "",
-            activeButton: false,
-            isSubmitted: false
-        });
+        let user = [state.nameSurname, "Tesodev", state.email, fullDate, state.country, state.city];
+        let arr = [...items,user];
+        dispatch(addNewRecord(arr))
     };
     return (
         <>
@@ -68,7 +75,7 @@ const Inputs = () => {
                     <input required value={state.email} onChange={(e) => onChangeInputHandler(e)} placeholder='Enter an email address' className={`${styles.input}`} type="email" name="email" />
                     {state.isSubmitted && !state.email.length && <p>Please don't blank in this field.</p>}
                 </div>
-                <button disabled={!(buttonActive)} className={`${!(buttonActive) ? styles.disabled : styles.activeButton} ${styles.button}`}>Add</button>
+                <button  disabled={!(buttonActive)} className={`${!(buttonActive) ? styles.disabled : styles.activeButton} ${styles.button}`}>Add</button>
             </form>
             {state.isSubmitted && state.nameSurname.split(" ").length < 2 && (
                 <div className={styles.modal}>
