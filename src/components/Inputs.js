@@ -1,5 +1,5 @@
 // React
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 // Styles
 import styles from "./Inputs.module.scss"
@@ -18,7 +18,7 @@ const Inputs = () => {
     });
     const onChangeInputHandler = (e) => {
         let value = e.target.value;
-        if(e.target.name !== "email") value = value.replace(/[0-9]/gi, "");
+        if (e.target.name !== "email") value = value.replace(/[0-9]/gi, "");
         setState({ ...state, [e.target.name]: value, isSubmitted: false });
     };
     let buttonActive = state.nameSurname.length && state.city.length && state.country.length && state.email.length
@@ -32,6 +32,14 @@ const Inputs = () => {
         let fullDate = day + "/" + monthDefault + "/" + year
         // eslint-disable-next-line no-unused-vars
         let user = [state.nameSurname, "Tesodev", state.email, fullDate, state.country, state.city]
+        setState({
+            nameSurname: "",
+            country: "",
+            city: "",
+            email: "",
+            activeButton: false,
+            isSubmitted: false
+        });
     };
     return (
         <>
